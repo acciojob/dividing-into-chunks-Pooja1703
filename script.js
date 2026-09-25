@@ -13,17 +13,12 @@ function divide(arr, n) {
       sum = sum + arr[i];
     } else {
       ans.push(temp);
-
-      temp = [];
-      temp.push(arr[i]);
-
+      temp = [arr[i]];
       sum = arr[i];
     }
   }
 
-  if (temp.length > 0) {
-    ans.push(temp);
-  }
+  ans.push(temp);
 
   return ans;
 }
