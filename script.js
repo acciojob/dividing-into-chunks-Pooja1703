@@ -1,5 +1,4 @@
 const arr = [4, 3, 2, 1];
-
 const divide = (arr, n) => {
 
   let ans = [];
@@ -10,7 +9,7 @@ const divide = (arr, n) => {
 
     if (sum + arr[i] <= n) {
       temp.push(arr[i]);
-      sum = sum + arr[i];
+      sum += arr[i];
     } else {
       ans.push(temp);
       temp = [arr[i]];
