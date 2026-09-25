@@ -9,15 +9,18 @@ const divide = (arr, n) => {
 
     if (sum + arr[i] <= n) {
       temp.push(arr[i]);
-      sum += arr[i];
+      sum = sum + arr[i];
     } else {
       ans.push(temp);
-      temp = [arr[i]];
+      temp = [];
+      temp.push(arr[i]);
       sum = arr[i];
     }
   }
 
-  ans.push(temp);
+  if (temp.length > 0) {
+    ans.push(temp);
+  }
 
   return ans;
 };
