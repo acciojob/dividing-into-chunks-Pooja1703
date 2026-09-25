@@ -1,7 +1,7 @@
-const arr = [1, 2, 3, 4, 1, 0, 2, 2];
+const arr = [4, 3, 2, 1];
 
 const divide = (arr, n) => {
-  
+
   let ans = [];
   let temp = [];
   let sum = 0;
@@ -11,8 +11,7 @@ const divide = (arr, n) => {
     if (sum + arr[i] <= n) {
       temp.push(arr[i]);
       sum = sum + arr[i];
-    } 
-    else {
+    } else {
       ans.push(temp);
       temp = [arr[i]];
       sum = arr[i];
@@ -22,7 +21,6 @@ const divide = (arr, n) => {
   ans.push(temp);
 
   return ans;
-
 };
 
 const n = prompt("Enter n: ");
